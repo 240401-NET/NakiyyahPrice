@@ -21,9 +21,11 @@ class Program
             Menu.MainMenu();
             userInput = Menu.UserIntInput();
 
-            choice.MainChoice(userInput);
+            gunplaList = choice.MainChoice(userInput);
             
 
         }while(userInput != 6);
+
+        Data.SaveGunpla(gunplaList);
     }
 }

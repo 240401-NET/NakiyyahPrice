@@ -14,16 +14,21 @@ class Data
 
             if(!File.Exists(path))
             {
-                File.Create(path);
+                File.Create(path).Close();
                 
             }
             else
             {
-                using FileStream json = File.OpenRead(path);
-                gunplaList = JsonSerializer.Deserialize<List<Gunpla>>(json);
+                string json = File.ReadAllText(path);
+                if(string.IsNullOrEmpty(json))
+                {
+                    return gunplaList;
+                }
+                else
+                {
+                    gunplaList = JsonSerializer.Deserialize<List<Gunpla>>(json);
+                }
             }
-
-
         
             return gunplaList;
         }
@@ -32,5 +37,14 @@ class Data
             throw;
         }
 
+    }
+
+    public static void SaveGunpla(List<Gunpla>? gunplaList)
+    {
+        string json = JsonSerializer.Serialize(gunplaList);
+
+        string path = "GunplaFile.json";
+
+        File.WriteAllText(path, json);
     }
 }

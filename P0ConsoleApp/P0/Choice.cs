@@ -5,14 +5,14 @@ namespace P0;
 
 class Choice
 {
-    public List<Gunpla> gunplaList {get; set;}
+    public List<Gunpla>? gunplaList {get; set;}
 
-    public Choice(List<Gunpla> gunplaList)
+    public Choice(List<Gunpla>? gunplaList)
     {
         this.gunplaList = gunplaList;
     }
 
-    public void MainChoice(int input)
+    public List<Gunpla>? MainChoice(int input)
     {
         switch(input)
         {
@@ -48,12 +48,14 @@ class Choice
                 break;
             //Exit
             case 6:
-                Console.WriteLine("Exiting now...");
+                Console.WriteLine("Saving and Exiting now...");
+                //1Data.SaveGunpla(gunplaList);
                 break;
             default:
                 Console.WriteLine("Incorrect option!");
                 break;
         }
+        return gunplaList;
     }
 
     public IEnumerable<Gunpla> SearchName(List<Gunpla> gunplaList)
