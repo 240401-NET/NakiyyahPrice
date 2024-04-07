@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = P0
-build_property.ProjectDir = C:\Users\silen\Documents\Revature\240401-NET\P0\P0\
+build_property.ProjectDir = C:\Users\silen\Documents\Revature\240401-NET\P0\P0ConsoleApp\P0\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

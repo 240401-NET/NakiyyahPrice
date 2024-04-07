@@ -54,6 +54,19 @@ class Menu
         return input.ToUpper().Trim(); 
     }
 
+    public static string UserStringInput()
+    {
+        string input = Console.ReadLine();
+
+        while(string.IsNullOrEmpty(input))
+        {
+            Console.WriteLine("Invalid! Entry must not br empty");
+            input = Console.ReadLine();
+        }
+
+        return input;
+    }
+
 
 
 }

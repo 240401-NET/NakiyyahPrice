@@ -1,3 +1,6 @@
+using System.Linq;
+using System.Collections.Generic;
+
 namespace P0;
 
 class Choice
@@ -37,6 +40,11 @@ class Choice
                 break;
             //Search--may not implement
             case 5:
+                List<Gunpla> search = SearchName(gunplaList).ToList();
+                foreach(Gunpla gunpla in search)
+                {
+                    Console.WriteLine(gunpla.ToString());
+                }
                 break;
             //Exit
             case 6:
@@ -48,6 +56,45 @@ class Choice
         }
     }
 
+    public IEnumerable<Gunpla> SearchName(List<Gunpla> gunplaList)
+    {
+        Console.WriteLine("Enter search term: ");
+        string input = Menu.UserStringInput();
+        
+        IEnumerable<Gunpla> search = 
+            from gunpla in gunplaList
+            where gunpla.name.ToUpper().Contains(input.ToUpper().Trim()) 
+            || gunpla.desc.ToUpper().Contains(input.ToUpper().Trim()) 
+            || gunpla.type.ToUpper().Contains(input.ToUpper().Trim())
+            || gunpla.status.ToUpper().Contains(input.ToUpper().Trim())
+            || gunpla.grade.ToUpper().Contains(input.ToUpper().Trim())
+            select gunpla;
+        return search;
+    }
+
+        public IEnumerable<Gunpla> SearchDesc(List<Gunpla> gunplaList)
+    {
+        Console.WriteLine("Enter search term: ");
+        IEnumerable<Gunpla> search = 
+            from gunpla in gunplaList
+            //where gunpla.desc.Contains(Menu.UserStringInput()) && gunpla.name.Contains()
+            select gunpla;
+        return search;
+    }
+
+        public IEnumerable<Gunpla> SearchName2(List<Gunpla> gunplaList)
+    {
+        Console.WriteLine("Enter search term: ");
+        IEnumerable<Gunpla> search = 
+            from gunpla in gunplaList
+            where gunpla.name.Contains(Menu.UserStringInput())
+            //where 
+            //where gunpla.desc.Contains(Menu.UserStringInput())
+            //where 
+            //where 
+            select gunpla;
+        return search;
+    }
     public void PrintChoice(int input)
     {
         switch(input)
@@ -67,7 +114,6 @@ class Choice
                 Console.WriteLine("Incorrect option! Exiting to main menu.");
                 break;
         }
-
     }
 
         public void StatusChoice(int input)

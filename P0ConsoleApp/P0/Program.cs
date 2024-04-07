@@ -6,14 +6,14 @@ class Program
     {
         //Console.WriteLine("Hello, World!");
 
-        List<Gunpla> gunplaList = new();
+        List<Gunpla>? gunplaList = Data.LoadGunpla();
         
-        Gunpla ayame = new("Petit'G Guy Chara'G Guy Ayame", "Purple Ayame", "HG", "Petit'G Guy", "Unworked");
-        gunplaList.Add(ayame);
+        //Gunpla ayame = new("Petit'G Guy Chara'G Guy Ayame", "Purple Ayame", "HG", "Petit'G Guy", "Unworked");
+        //gunplaList.Add(ayame);
         
         Choice choice = new( gunplaList);
 
-        Console.WriteLine(ayame.ToString());
+        //Console.WriteLine(ayame.ToString());
 
         int userInput = 0;
         do
