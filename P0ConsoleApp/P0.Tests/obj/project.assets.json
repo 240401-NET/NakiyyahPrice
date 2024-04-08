@@ -1708,6 +1708,16 @@
         "build": {
           "build/net6.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "P0/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/P0.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/P0.dll": {}
+        }
       }
     }
   },
@@ -5497,11 +5507,17 @@
         "xunit.runner.visualstudio.2.5.3.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "P0/1.0.0": {
+      "type": "project",
+      "path": "../P0/P0.csproj",
+      "msbuildProject": "../P0/P0.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.NET.Test.Sdk >= 17.8.0",
+      "P0 >= 1.0.0",
       "coverlet.collector >= 6.0.0",
       "xunit >= 2.5.3",
       "xunit.runner.visualstudio >= 2.5.3"
@@ -5513,11 +5529,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\silen\\Documents\\Revature\\240401-NET\\P0\\P0.Tests\\P0.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\silen\\Documents\\Revature\\240401-NET\\P0\\P0ConsoleApp\\P0.Tests\\P0.Tests.csproj",
       "projectName": "P0.Tests",
-      "projectPath": "C:\\Users\\silen\\Documents\\Revature\\240401-NET\\P0\\P0.Tests\\P0.Tests.csproj",
+      "projectPath": "C:\\Users\\silen\\Documents\\Revature\\240401-NET\\P0\\P0ConsoleApp\\P0.Tests\\P0.Tests.csproj",
       "packagesPath": "C:\\Users\\silen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\silen\\Documents\\Revature\\240401-NET\\P0\\P0.Tests\\obj\\",
+      "outputPath": "C:\\Users\\silen\\Documents\\Revature\\240401-NET\\P0\\P0ConsoleApp\\P0.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\silen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5533,7 +5549,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\silen\\Documents\\Revature\\240401-NET\\P0\\P0ConsoleApp\\P0\\P0.csproj": {
+              "projectPath": "C:\\Users\\silen\\Documents\\Revature\\240401-NET\\P0\\P0ConsoleApp\\P0\\P0.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

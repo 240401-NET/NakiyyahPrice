@@ -24,7 +24,7 @@ class Gunpla
 
     public override string ToString()
     {
-        return "Name: " + name +  "\nGrade: " + grade + "\nType: " + type + "\nDescription: " + desc + "\nStatus: " + status;
+        return $"Name: {name}\nGrade: {grade}\nType: {type}\nDescription: {desc}\nStatus: {status}";
     }
   
 }

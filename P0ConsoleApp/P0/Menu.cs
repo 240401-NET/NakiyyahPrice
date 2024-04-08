@@ -1,7 +1,8 @@
 namespace P0;
 
-class Menu
+public class Menu
 {
+    public Menu(){}
 
     public static void MainMenu()
     {
@@ -10,24 +11,15 @@ class Menu
         Console.WriteLine("3. Edit");
         Console.WriteLine("4. Delete");
         Console.WriteLine("5. Search");
-        Console.WriteLine("6. Exit");
+        Console.WriteLine("9. Exit");
     }
 
     public static void PrintMenu()
     {
         Console.WriteLine("1. All");
-        Console.WriteLine("2. Type");
+        Console.WriteLine("2. Name");
         Console.WriteLine("3. Exit to Main Menu");
     }
-
-    public static void StatusMenu()
-    {
-        Console.WriteLine("1. Unworked");
-        Console.WriteLine("2. Incomplete");
-        Console.WriteLine("3. Finished");
-        Console.WriteLine("4. Broken");
-    }
-
     public static int UserIntInput()
     {
         try
@@ -36,7 +28,7 @@ class Menu
         }
         catch(Exception e)
         {
-            Console.WriteLine(e.Message + "Invalid option! Try again.");
+            Console.WriteLine(e.Message + "Invalid option! Must be a number. Try again.");
             return -1;
         }
     }
@@ -45,7 +37,7 @@ class Menu
     {
         string input = Console.ReadLine();
         
-        while(input.ToUpper().Trim().Equals("Y") && input.ToUpper().Trim().Equals("N"))
+        while(!input.ToUpper().Trim().Equals("Y") && !input.ToUpper().Trim().Equals("N"))
         {
             Console.WriteLine("Invalid option! Must be Y or N");
             input = Console.ReadLine();
@@ -56,11 +48,11 @@ class Menu
 
     public static string UserStringInput()
     {
-        string input = Console.ReadLine();
+        string? input = Console.ReadLine();
 
-        while(string.IsNullOrEmpty(input))
+        while(string.IsNullOrEmpty(input.Trim()))
         {
-            Console.WriteLine("Invalid! Entry must not br empty");
+            Console.WriteLine("Invalid option! Entry must not be empty");
             input = Console.ReadLine();
         }
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lJZRkg7Rj5pVTOtX7sewrolPEoVGEeJhXrm0dL0cjGk5VyydkmkAWmRJT5HtQGF70dKaKnugvXBpSp69hCdpZA==",
+  "dgSpecHash": "0Zq/KG99InmmzCat8kxMu4pwj79s5sbJ6RbOYLykSlb7YmpoESbzuMPFppCu3XcCLgoxNFrD/Bbov4HWQ3An/g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\silen\\Documents\\Revature\\240401-NET\\P0\\P0.Tests\\P0.Tests.csproj",
+  "projectFilePath": "C:\\Users\\silen\\Documents\\Revature\\240401-NET\\P0\\P0ConsoleApp\\P0.Tests\\P0.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\silen\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\silen\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",
