@@ -65,20 +65,6 @@ public class GunplaRepository : IGunplaRepository
             return _context.Models.Where(m => m.Description.Contains(search.ToUpper().Trim())).ToList();
         }
     }
-
-    public List<Model> SearchModelByGrade(string search)
-    {
-        if(search.Trim() is null || search.Trim().Length != 2) 
-        {
-            return null;
-        }
-        else
-        {
-
-            return _context.Models.Where(m => m.Description.Contains(search.Trim())).ToList();
-        }
-    }
-
     public List<Gunpla>? AddModel(Model model)
     {
 
