@@ -23,8 +23,6 @@ public interface IGunplaRepository
     List<Model> SearchModelByDesc(string search);
 
 
-    List<Model> SearchModelByGrade(string search);
-
 
     List<Gunpla>? AddModel(Model model);
 
