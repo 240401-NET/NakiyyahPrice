@@ -4,7 +4,6 @@ using Azure.Core.Pipeline;
 
 Console.WriteLine("Hello");
 
-string connectionString ="Server=tcp:240401netnp.database.windows.net,1433;Initial Catalog=FreeDatabaseNP;Persist Security Info=False;User ID=training-admin;Password=revtrain1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=60;";
 
 //var optionsBuilder = new DbContextOptionsBuilder<FreeDatabaseNpContext>();
 //optionsBuilder.UseSqlServer(["dbconnectionstring"]);
