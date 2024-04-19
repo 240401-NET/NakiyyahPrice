@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace P1;
-
-public partial class Status
+[Table("Status")]
+public class Status
 {
     public int Id { get; set; }
 
     public string? Status1 { get; set; }
+
 }

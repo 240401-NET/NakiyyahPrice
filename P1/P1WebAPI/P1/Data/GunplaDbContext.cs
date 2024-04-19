@@ -10,6 +10,7 @@ public class GunplaDbContext : DbContext
     public DbSet<Grade> Grades { get; set; }
     public DbSet<Status> Statuses { get; set; }
     public DbSet<Model> Models { get; set; }
+    public DbSet<Gunpla> Gunplas { get; set; }
 
 
 }

@@ -273,3 +273,5 @@ C:\Users\silen\Documents\Revature\240401-NET\P0\P1\P1WebAPI\P1\obj\Debug\net8.0\
 C:\Users\silen\Documents\Revature\240401-NET\P0\P1\P1WebAPI\P1\obj\Debug\net8.0\P1.csproj.Up2Date
 C:\Users\silen\Documents\Revature\240401-NET\P0\P1\P1WebAPI\P1\obj\Debug\net8.0\P1.genruntimeconfig.cache
 C:\Users\silen\Documents\Revature\240401-NET\P0\P1\P1WebAPI\P1\obj\Debug\net8.0\ref\P1.dll
+C:\Users\silen\Documents\Revature\240401-NET\P0\P1\P1WebAPI\P1\bin\Debug\net8.0\Castle.Core.dll
+C:\Users\silen\Documents\Revature\240401-NET\P0\P1\P1WebAPI\P1\bin\Debug\net8.0\Moq.dll

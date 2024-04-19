@@ -1,9 +1,10 @@
 using P1;
 using Microsoft.EntityFrameworkCore;
+using Azure.Core.Pipeline;
 
 Console.WriteLine("Hello");
 
-//string connectionString ="Server=tcp:240401netnp.database.windows.net,1433;Initial Catalog=FreeDatabaseNP;Persist Security Info=False;User ID=training-admin;Password="revtrain1!";MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+string connectionString ="Server=tcp:240401netnp.database.windows.net,1433;Initial Catalog=FreeDatabaseNP;Persist Security Info=False;User ID=training-admin;Password=revtrain1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=60;";
 
 //var optionsBuilder = new DbContextOptionsBuilder<FreeDatabaseNpContext>();
 //optionsBuilder.UseSqlServer(["dbconnectionstring"]);
@@ -18,8 +19,11 @@ Console.WriteLine("Hello");
 
 
 // // Add services to the container.
- builder.Services.AddDbContext<GunplaDbContext>(option => option.UseSqlServer(builder.Configuration["dbconnsctionstring"]));
-builder.Services.AddScoped<GunplaRepository>();
+
+var dbconnectionstring = builder.Configuration["ConnectionStrings:dbconncetionstring"];
+ builder.Services.AddDbContext<GunplaDbContext>(option => option.UseSqlServer(dbconnectionstring));
+builder.Services.AddScoped<IGunplaRepository,GunplaRepository>();
+builder.Services.AddScoped<IGunplaService,GunplaService>();
 builder.Services.AddControllers();
 
 // // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -36,6 +40,15 @@ builder.Services.AddControllers();
  }
 
  app.UseHttpsRedirection();
+
+
+// app.MapGet("/all2", (GunplaRepository repo) => 
+// {
+//     return repo.GetAllModels();
+// })
+// .WithName("All Models")
+// .WithOpenApi();
+
 
 // var summaries = new[]
 // {
@@ -57,6 +70,7 @@ builder.Services.AddControllers();
 // .WithName("GetWeatherForecast")
 // .WithOpenApi();
 
+app.MapControllers();
  app.Run();
 
 // record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
